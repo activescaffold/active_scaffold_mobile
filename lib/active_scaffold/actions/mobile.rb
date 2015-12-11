@@ -13,9 +13,9 @@ module ActiveScaffold::Actions
       if @list_columns && mobile_view?
         objects = super
         if objects.is_a? Hash
-          objects.merge(:etag => [objects[:etag], mobile_view])
+          objects.merge(:etag => [objects[:etag], mobile_views])
         else
-          [objects, mobile_view]
+          [objects, mobile_views]
         end
       else
         super
