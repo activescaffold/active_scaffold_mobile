@@ -4,6 +4,10 @@ module ActiveScaffoldMobile
       ActiveScaffold.set_defaults do |config|
         config.actions << :mobile
       end
+
+      ActiveSupport.on_load(:action_view) do
+        include ActiveScaffold::Helpers::MobileHelpers
+      end
     end
   end
 end
