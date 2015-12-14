@@ -66,6 +66,7 @@ module ActiveScaffold::Actions
 
     def prepare_for_mobile
       Array(mobile_views).reverse.each do |view|
+        prepend_view_path ActiveScaffoldMobile.plugin_directory + 'app' + view
         prepend_view_path Rails.root + 'app' + view
       end
     end

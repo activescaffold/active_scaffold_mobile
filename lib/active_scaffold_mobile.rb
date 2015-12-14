@@ -3,6 +3,8 @@ require 'active_scaffold_mobile/version'
 require 'mobile-fu'
 
 module ActiveScaffoldMobile
+  cattr_reader :plugin_directory
+  @@plugin_directory = Pathname.new(File.expand_path('../..', __FILE__))
 end
 
 module ActiveScaffold
