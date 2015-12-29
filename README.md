@@ -15,3 +15,6 @@ Two options to define phone and tablet columns:
 
 When row is clicked, some other columns for the row will be displayed
 vertically and actions at bottom. Use @extended_columns@ to define them.
+
+Set session[:desktop_version] to disable mobile views, delete :desktop_version
+from session (or set to nil) to enable them again.

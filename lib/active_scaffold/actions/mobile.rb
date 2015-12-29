@@ -50,6 +50,7 @@ module ActiveScaffold::Actions
     end
 
     def mobile_views
+      return [] if session[:desktop_version]
       @mobile_views ||=
         if is_mobile_device?
           'views_phone'
