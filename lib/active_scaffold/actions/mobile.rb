@@ -4,6 +4,7 @@ module ActiveScaffold::Actions
     def self.included(base)
       base.has_mobile_fu false
       base.before_action :prepare_for_mobile, :if => :mobile_view?
+      base.helper_method :mobile_view?
     end
 
     protected
@@ -49,10 +50,10 @@ module ActiveScaffold::Actions
     end
 
     def mobile_views
-      @mobile_views ||= 
+      @mobile_views ||=
         if is_mobile_device?
           'views_phone'
-        elsif is_tablet_device? 
+        elsif is_tablet_device?
           case active_scaffold_config.mobile.tablet_views
           when true then 'views_tablet'
           when :phone_fallback then ['views_tablet', 'views_phone']
