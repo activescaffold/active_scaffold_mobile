@@ -64,7 +64,7 @@ GEM
     mobile-fu (1.4.0)
       rack-mobile-detect
       rails
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     rack (1.6.8)
     rack-mobile-detect (0.4.0)
@@ -115,4 +115,4 @@ DEPENDENCIES
   active_scaffold_mobile!
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
