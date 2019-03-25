@@ -26,11 +26,11 @@ module ActiveScaffold::Actions
     def list_columns
       @list_columns ||= begin
         if extended_columns?
-          active_scaffold_config.mobile.extended_columns.collect_visible
+          active_scaffold_config.mobile.extended_columns.visible_columns
         elsif phone_columns?
-          active_scaffold_config.mobile.phone_columns.collect_visible
+          active_scaffold_config.mobile.phone_columns.visible_columns
         elsif tablet_columns?
-          active_scaffold_config.mobile.tablet_columns.collect_visible
+          active_scaffold_config.mobile.tablet_columns.visible_columns
         else
           super
         end

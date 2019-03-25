@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
 
-  s.add_runtime_dependency(%q<active_scaffold>, [">= 3.4.31"])
-  s.add_runtime_dependency(%q<rails>, [">= 4.1.0"])
+  s.add_runtime_dependency(%q<active_scaffold>, [">= 3.6.0.pre"])
   s.add_runtime_dependency(%q<mobile-fu>, ["~> 1.3"])
 end
